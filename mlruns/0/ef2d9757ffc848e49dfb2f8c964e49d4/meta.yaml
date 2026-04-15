@@ -1,0 +1,14 @@
+artifact_uri: file:c:/Users/KOBA/OneDrive/Desktop/ML/ML-Assignment1/mlruns/0/ef2d9757ffc848e49dfb2f8c964e49d4/artifacts
+end_time: 1775946400765
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ef2d9757ffc848e49dfb2f8c964e49d4
+run_name: Beginner_LinRegr
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775946400605
+status: 3
+tags: []
+user_id: KOBA

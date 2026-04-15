@@ -1,0 +1,14 @@
+artifact_uri: file:c:/Users/KOBA/OneDrive/Desktop/ML/ML-Assignment1/mlruns/413107881745981019/b65b656afbea44fc8587f2f1f3213c0e/artifacts
+end_time: 1776192191283
+entry_point_name: ''
+experiment_id: '413107881745981019'
+lifecycle_stage: active
+run_id: b65b656afbea44fc8587f2f1f3213c0e
+run_name: XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776192191010
+status: 3
+tags: []
+user_id: Sula1909

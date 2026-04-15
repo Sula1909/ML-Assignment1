@@ -1,7 +1,8 @@
 artifact_location: file:c:/Users/KOBA/OneDrive/Desktop/ML/ML-Assignment1/mlruns/356485918993705753
 creation_time: 1775429957116
 experiment_id: '356485918993705753'
-last_update_time: 1775429957116
-lifecycle_stage: active
+last_update_time: 1776116476653
+lifecycle_stage: deleted
 name: House_Prices_First_Steps
+tags: {}
 workspace: default
