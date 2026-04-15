@@ -130,13 +130,13 @@ Saleprice-ს გრაფიკის დაკვირვებისას �
 
 - [Assignment1-House_Prices ექსპერიმენტი](https://dagshub.com/Sula1909/ML-Assignment1.mlflow)
 
-📈 Linear Regression
+**📈 Linear Regression**
 
 საწყისი Linear Regression, რომელსაც ლოგარითმიც კი არ ქონდა მოდებული და შესაბამისად ყველაზე საშინელი და ყველაფერს აცდენილი შედეგები დააბრუნა. https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/6bfd6b37986e4af29d91a399ebe20557
 
 რადგან ლოგარითმის მოდების შემდეგ SalePrice-ს ფუნქციამ დაახლოებით წრფივი ფორმა მიიღო, შემეძლო მეფიქრა, რომ წრფივი მოდელით ნორმალურ პასუხამდე გასვლა. ამის გამო გამოვიყენე შედარებით უფრო დახვეწილი, მაგრამ მაინც პრიმიტიული Linear Regression. აქ უკვე მოდებულია ლოგარითმი და ადამიანური პასუხი აქვს დაბრუნებული, მაგრამ სხვა მოდელებს მაინც ჩამორჩება შედეგითაც და კომპლექსურობითაც. https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/a46ed802ef3c431fb4e198ae68cd6e55
 
-📈 Lasso
+**📈 Lasso**
 
 შემდეგ Lasso-ს მოდელები სხვადასხვა alpha-თი. რაც უფრო ნაკლებია alpha, მით უფრო მეტ feature-ს იყენებს, ანუ მეტია სიზუსტეც (train-ზე).
 Lasso 0.1 https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/c961faebbdd14c4484fd62d7f63e78ac
@@ -146,7 +146,7 @@ Lasso 0.001 https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/r
 Lasso 0.01-ს და 0.001-ს R2-ებს შორის train-ზე საკმაო სხვაობა იყო, 0.02 (Lasso 0.001-ს სასარგებლოდ) და RMSE-ებს შორისაც 0.015, მაგრამ test-ზე თითქმის იდენტური RMSE  შედეგები აჩვენეს, Lasso 0.01 - მა 0.14729 და Lasso 0.001 - მა 0.14631. ანუ Lasso 0.001 ნელ-ნელა overfit-სკენ მიდიოდა და ამ მონაცემების სირთულისთვის არ იყო საჭირო 0.001 საჭირო, რადგან უკვე გაზეპირებისკენ მიდიოდა. 
 ![alt text](image-7.png)
 
-💎 Kernel Ridge Regression
+**💎 Kernel Ridge Regression**
 
 შემდეგ Kernel Ridge მოდელი გამოვიყენე. თავიდან დაუსკალირებელ დატაზე დავტესტე, რამაც, რა თქმა უნდა, საშინელი შედეგი მომცა. https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/82c8ba05d6dc498ea035fb26a583ead6
 
@@ -154,21 +154,21 @@ Lasso 0.01-ს და 0.001-ს R2-ებს შორის train-ზე სა
 ამის გამო ვიფიქრე, რომ საუკეთესო მოდელს მივაგენი, მაგრამ შემდეგ test-ზე გაშვებისას საკმაო სხვაობა იყო train და test შედეგებს შორის და აღმოვაჩინე, რომ overfit-სკენ მიდიოდა მოდელი. train-ზე RMSE ჰქონდა 0.11, ხოლო test-ზე 0.15. ასე რომ უკეთეს მოდელზე დავიწყე ფიქრი.
 ![alt text](image-9.png)
 
-🌲 Decision Tree
+**🌲 Decision Tree**
 
 ამის შემდეგ უკვე ხეებზეც გადავედი და პირველი, რა თქმა უნდა, პრიმიტიული Decision Tree მოდელი ვცადე, რომელმაც train-ზე სხვებთან შედარებით საკმაოდ უარესი, მაგრამ მაინც ნორმალური შედეგი დააბრუნა. მაგრამ test-ზე გაშვების შემდეგ მივხვდი, რომ საშინელ overfit თან მქონდა საქმე, რადგან submission ფაილში ნაწინასწარმეტყველები ყველა ID-ის შესაფერისი SalePrice იყო კონკრეტული რიცხვი, 705 766$ და Kaggle-ზეც, რა თქმა უნდა საშინელი შედეგი აჩვენა. https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/3cc8e1677dd44563abb77725ab35263a
 
 არადა Decision Tree-ს ჰიპერპარამეტრებისთვის GridSearchCV გამოვიყენე და საუკეთესო პარამეტრებად {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10} დააბრუნა, მაგრამ როგორც უკვე ვთქვი, Decision Tree-ს მოღვაწეობა სრული კრახით დასრულდა და ამ ამოცანისთვის ზედმეტად პრიმიტიული იყო.
 ![alt text](image-10.png)
 
-🌳 Random Forest
+**🌳 Random Forest**
 
 Decision Tree-ს შემდეგ უკვე ვცადე Random Forest, რომელიც Decision Tree-ების ერთიანობაა და დაახლოებით იმავე პრობლემას ველოდი და ასეც მოხდა.
 DT-სგან განსხვავებით train-ზე კარგი შედეგები დააბრუნა Random Forest-მა https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/47b9a53611164a769836e17db4c02466
 იმის მიუხედავად, რომ Random Forest-ის საუკეთესო პარამეტრების საპოვნელად აქაც GridSearchCV გამოვიყენე და დრო დავხარჯე, test-ზე გაშვებისას სრული კრახი განიცადა მოდელმა და სერიოზული overfit გამოავლინა, SalePrice-ს output-ებიც ერთმანეთთან საკმაოდ ახლო-მახლო რიცხვები იყო. ანუ დასკვნა ის იყო, რომ DT თუ ზედმეტად პრიმიტიული იყო ამ ამოცანისთვის, DT-ების ერთიანობაც პრიმიტიული იქნებოდა. 
 ![alt text](image-12.png)
 
-🚀 XGBoost
+**🚀 XGBoost**
 
 და შემდეგ უკვე მივადექი XGBoost-ს, რომელიც თავიდან საკმაოდ basic პარამეტრებით გამოვიყენე max_depth, n_estimators da random_state, მაგრამ შედეგი მაინც კარგი მივიღე https://dagshub.com/Sula1909/ML-Assignment1.mlflow/#/experiments/1/runs/1b9fa9273ab54bae957ba6588cf214c6
 
@@ -181,7 +181,7 @@ test-ზე RMSE 0.14228, ხოლო train-ზე - 0.13921.
 ![alt text](image-14.png)
 
 
-📊 მეტრიკების განმარტება
+**📊 მეტრიკების განმარტება**
 
 მოდელების შესაფასებლად გამოვიყენე სამი ძირითადი მეტრიკა. მეტრიკები დათვლილია ლოგარითმულ სკალაზე გადაყვანილ ფასებზე (SalePrice), რაც Kaggle-ის სტანდარტია ამ კონკურსისთვის.
 
